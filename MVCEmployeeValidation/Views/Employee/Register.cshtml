@@ -1,0 +1,38 @@
+﻿@model MVCEmployeeValidation.Models.Employee
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+@using (Html.BeginForm())
+{ 
+<table class="table table-bordered">
+    <tr>
+        <td>EmpId</td>
+        <td>@Html.TextBoxFor(m => m.Empid)</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>Designation</td>
+        <td>@Html.DropDownListFor(m => m.Designation, ViewBag.Designation as SelectList)</td>
+    </tr>
+    <tr>
+        <td>ProjectName</td>
+        <td>@Html.DropDownListFor(m => m.Project, ViewBag.Project as SelectList)</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@Html.Password("Pass")</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Register" />
+
+        </td>
+    </tr>
+
+</table>
+}

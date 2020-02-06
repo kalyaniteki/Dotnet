@@ -1,0 +1,51 @@
+﻿@model ValidationsMvcAttributes.Models.Employee;
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+@using(Html.BeginForm())
+{
+<table>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.id)</td>
+        <td>@Html.TextBoxFor(m => m.id)</td>
+        <td>@Html.ValidationMessageFor(m => m.id)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Name)</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+        <td>@Html.ValidationMessageFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.email)</td>
+        <td>@Html.TextBoxFor(m => m.email)</td>
+        <td>@Html.ValidationMessageFor(m => m.email)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.mobile)</td>
+        <td>@Html.TextBoxFor(m => m.mobile)</td>
+        <td>@Html.ValidationMessageFor(m => m.mobile)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.uname)</td>
+        <td>@Html.TextBoxFor(m => m.uname)</td>
+        <td>@Html.ValidationMessageFor(m => m.uname)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.pwd)</td>
+        <td>@Html.PasswordFor(m => m.pwd)</td>
+        <td>@Html.ValidationMessageFor(m => m.pwd)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.cpwd)</td>
+        <td>@Html.TextBoxFor(m => m.cpwd)</td>
+        <td>@Html.ValidationMessageFor(m => m.cpwd)</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <input type="submit" value="Register" class="btn btn-primary"/>
+        </td>
+    </tr>
+</table>
+}

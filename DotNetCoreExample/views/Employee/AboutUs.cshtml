@@ -1,0 +1,33 @@
+﻿@model DotNetCoreExample.models.EmployeeProjectViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AboutUs</title>
+</head>
+<body>
+    <h1>Employee</h1>
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>EMAIL</td>
+            <td>DEPT</td>
+            <td>PROJECTNAME</td>
+        </tr>
+        <tr>
+            <td>@Model.employee.id</td>
+            <td>@Model.employee.name</td>
+            <td>@Model.employee.email</td>
+            <td>@Model.employee.dept</td>
+            <td>@Model.projectname</td>
+        </tr>
+
+    </table>
+</body>
+</html>

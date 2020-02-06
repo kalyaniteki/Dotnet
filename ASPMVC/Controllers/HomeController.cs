@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace ASPMVC.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult Mypage()
+        {
+            return Content("hiiiii") ;
+        }
+        public ActionResult Mypage1()
+        {
+            return Json("{id:1;name:hi}",JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult Mypage2()
+        {
+            return View();
+        }
+    }
+}

@@ -1,0 +1,32 @@
+﻿@model MVCEmployeeValidation.Models.Employee
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>EMPId</td>
+            <td>@Html.TextBox("id")</td>
+        </tr>
+         <tr>
+            <td>Password</td>
+            <td>@Html.Password("pass")</td>
+        </tr>
+         <tr>
+             <td colspan="2">
+                 <input type="submit" value="Login" class="btn btn-primary" />
+             </td>
+         </tr>
+        <tr>
+            <td>@Html.ActionLink("NewUser","Register","Employee")</td>
+        </tr>
+         <tr>
+            <td>
+                <span class="text-danger">@ViewData["err"]</span>
+            </td>
+        </tr>
+    </table>
+}

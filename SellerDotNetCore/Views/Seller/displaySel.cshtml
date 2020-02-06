@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SellerDotNetCore.model.Seller>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>displaySel</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>PhoneNumber</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        @foreach (var v in Model)
+        {
+        <tr>
+            <td>@v.id</td>
+            <td>@v.name</td>
+            <td>@v.phno</td>
+            <td>@v.password</td>
+        </tr>}
+    </table>
+</body>
+</html>

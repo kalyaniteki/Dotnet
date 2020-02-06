@@ -1,0 +1,55 @@
+﻿@model DotNetCoreExample.models.Employee
+@*@{
+    Layout = _la;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+</head>
+<body>
+    
+    @*@{ var emp = ViewData["employee"] as DotNetCoreExample.models.Employee;
+     }*@
+   
+    <h1>Employee</h1>
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>EMAIL</td>
+            <td>DEPT</td>
+        </tr>
+        <tr>
+            <td>@Model.id</td>
+            <td>@Model.name</td>
+            <td>@Model.email</td>
+            <td>@Model.dept</td>
+        </tr>
+        @*<tr>
+            <td>@empl.id</td>
+            <td>@empl.name</td>
+            <td>@empl.email</td>
+            <td>@empl.dept</td>
+        </tr>*@
+        @*<tr>
+            <td>@ViewData["id"]</td>
+            <td>@ViewData["name"]</td>
+            <td>@ViewData["email"]</td>
+            <td>@ViewData["dept"]</td>
+        </tr>*@
+        @*<tr>
+            <td>@ViewBag.employee.id</td>
+            <td>@ViewBag.employee.name</td>
+            <td>@ViewBag.employee.email</td>
+            <td>@ViewBag.employee.dept</td>
+
+        </tr>*@
+
+    </table>
+
+</body>
+</html>

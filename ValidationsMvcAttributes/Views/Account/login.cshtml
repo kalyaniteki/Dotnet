@@ -1,0 +1,26 @@
+﻿@model Login;
+@{
+    ViewData["Title"] = "login";
+}
+
+<h1>login</h1>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.DisplayNameFor(m=>m.uname)</td>
+            <td>@Html.EditorFor(m=>m.uname)</td>
+            <td>@Html.ValidationMessageFor(m=>m.uname)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m=>m.pass)</td>
+            <td>@Html.EditorFor(m=>m.pass)</td>
+            <td>@Html.ValidationMessageFor(m=>m.pass)</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="login" />
+            </td>
+        </tr>
+    </table>
+}

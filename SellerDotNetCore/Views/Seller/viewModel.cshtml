@@ -1,0 +1,31 @@
+﻿@model SellerDotNetCore.model.ModelView
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>viewModel</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>PhoneNumber</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>@Model.seller.id</td>
+            <td>@Model.seller.name</td>
+            <td>@Model.seller.password</td>
+            <td>@Model.seller.phno</td>
+        </tr>
+    </table>
+</body>
+</html>
